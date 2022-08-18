@@ -6,9 +6,9 @@ public class Box {
     private double length;
 
     public Box(double height, double width, double length) {
-        this.height = height;
-        this.width = width;
-        this.length = length;
+        setHeight(height <= 0 ? 1 : height);
+        setWidth(width <= 0 ? 1 : width);
+        setLength(length <= 0 ? 1 : length);
     }
 
     public Box(double cubeValue) {
@@ -40,7 +40,10 @@ public class Box {
     }
 
     public void setHeight(double height) {
-        this.height = height;
+        if (height <= 0)
+            System.out.println("Height must be greater than zero!");
+        else
+            this.height = height;
     }
 
     public double getWidth() {
@@ -48,7 +51,10 @@ public class Box {
     }
 
     public void setWidth(double width) {
-        this.width = width;
+        if (width <= 0)
+            System.out.println("width must be greater than zero!");
+        else
+            this.width = width;
     }
 
     public double getLength() {
@@ -56,6 +62,9 @@ public class Box {
     }
 
     public void setLength(double length) {
-        this.length = length;
+        if (length <= 0)
+            System.out.println("length must be greater than zero!");
+        else
+            this.length = length;
     }
 }
