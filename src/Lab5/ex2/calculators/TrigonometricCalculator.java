@@ -2,26 +2,26 @@ package Lab5.ex2.calculators;
 
 public class TrigonometricCalculator {
     public double sine(double x) {
-        return 0;
+        return Math.sin(x);
     }
 
     public double cossine(double x) {
-        return 0;
+        return Math.cos(x);
     }
 
     public double tangent(double x) {
-        return 0;
+        return Math.tan(x);
     }
 
     public double arcsine(double x) {
-        return 0;
+        return Math.asin(x);
     }
 
     public double arccosine(double x) {
-        return 0;
+        return Math.acos(x);
     }
 
     public double arctangent(double x) {
-        return 0;
+        return Math.atan(x);
     }
 }

@@ -5,11 +5,11 @@ public class ScientificCalculator {
     private double holdValue;
 
     public final double exp(double x){
-        return 0;
+        return Math.pow(Math.E, x);
     }
 
     public final double log(double x){
-        return 0;
+        return Math.log(x);
     }
 
     public final void putValueInMemory(double x){
