@@ -9,30 +9,36 @@ public class Cube extends Box {
 
     @Override
     public void setHeight(double height) {
-        setLength(height);
+        if (height != super.getHeight()) {
+            setSide(height);
+        }
     }
 
     @Override
     public void setLength(double length) {
         if (length != super.getLength()) {
-            super.setLength(length);
-            super.setHeight(length);
-            super.setWidth(length);
+            setSide(length);
         }
     }
 
     @Override
     public void setWidth(double width) {
-        setLength(width);
+        if (width != super.getWidth()) {
+            setSide(width);
+        }
     }
 
-    public void setSide(double side){
-        super.setLength(side);
-        super.setWidth(side);
-        super.setHeight(side);
+    public void setSide(double side) {
+        if (side > 0) {
+            super.setLength(side);
+            super.setHeight(side);
+            super.setWidth(side);
+        } else {
+            System.out.println("Invalid value!");
+        }
     }
 
-    public double getSide(){
+    public double getSide() {
         return getLength();
     }
 
