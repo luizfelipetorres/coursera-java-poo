@@ -9,8 +9,19 @@ public class ClassicalCD extends Item {
     private String recordinLocation;
     private Date releaseDate;
 
+    public ClassicalCD(String title, double price, int quantity, String composer, String[] performers,
+            String recordinLocation, Date releaseDate) {
+        super(title, price, quantity);
+        this.setComposer(composer);
+        for (String p : performers) {
+            this.addPerformer(p);
+        }
+        this.setRecordinLocation(recordinLocation);
+        this.setReleaseDate(releaseDate);
+    }
+
     public void addPerformer(String name) {
-        if (performersCount >= performers.length) {
+        if (performersCount < performers.length) {
             performers[performersCount++] = name;
         } else {
             System.out.println("There's no space in the room!");
@@ -32,6 +43,14 @@ public class ClassicalCD extends Item {
 
     public void setComposer(String composer) {
         this.composer = composer;
+    }
+
+    public String[] getPerformers() {
+        return performers;
+    }
+
+    public void setPerformers(String[] performers) {
+        this.performers = performers;
     }
 
     public String getRecordinLocation() {
