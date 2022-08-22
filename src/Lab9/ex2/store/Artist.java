@@ -2,8 +2,8 @@ package Lab9.ex2.store;
 
 public class Artist {
     private String name;
-    private String membersName[];
-    private String memberInstruments[];
+    private String membersName[] = new String[20];
+    private String memberInstruments[] = new String[20];
 
     
 
