@@ -1,15 +1,30 @@
 package Lab5.ex1;
 
-public class Box {
+import Lab11.Shape;
+import Lab11.ThreeDimensional;
+
+public class Box extends Shape implements ThreeDimensional{
     private double height;
     private double width;
     private double length;
 
     public Box(double height, double width, double length) {
+        super();
+        setColor("white");
+        setName("Unknown");
         setHeight(height <= 0 ? 1 : height);
         setWidth(width <= 0 ? 1 : width);
         setLength(length <= 0 ? 1 : length);
     }
+
+ 
+
+    @Override
+    public String toString() {
+        return "Box [height=" + height + ", length=" + length + ", width=" + width + ", getColor()=" + getColor() + ", getName()=" + getName() +  "]";
+    }
+
+
 
     public Box(double cubeValue) {
         this(cubeValue, cubeValue, cubeValue);
