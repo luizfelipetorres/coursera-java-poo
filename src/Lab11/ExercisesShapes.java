@@ -1,5 +1,9 @@
 package Lab11;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 import Lab5.ex1.Box;
 import Lab9.ex1.Cube;
 
