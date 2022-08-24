@@ -14,7 +14,7 @@ public class Playground {
                     System.out.println("mapping " + n);
                     return n * n;
                 })
-                .limit(3)
+                .limit(2)
                 .collect(Collectors.toList());
 
     }
