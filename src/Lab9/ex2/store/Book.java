@@ -5,8 +5,6 @@ public class Book extends Item {
     private String publisher;
     private String category;
 
-    
-
     public Book(String title, double price, int quantity, String author, String publisher, String category) {
         super(title, price, quantity);
         this.setAuthor(author);
@@ -36,6 +34,11 @@ public class Book extends Item {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    @Override
+    public String toString() {
+        return "Book [author=" + author + ", category=" + category + ", publisher=" + publisher + "]";
     }
 
 }

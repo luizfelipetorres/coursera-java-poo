@@ -5,7 +5,7 @@ public class CoffeeExerciser {
         Coffee cafe = null;
 
         try {
-            cafe = new Coffee(119);
+            cafe = new Coffee(125);
         } catch (Exception e) {
             e.getStackTrace();
         }finally{

@@ -8,7 +8,7 @@ public class Coffee {
         try {
             this.setTemperature(temperature);
         } catch (Exception e) {
-            e.getStackTrace();
+            System.out.println(e.getMessage());
             System.out.println("Setting temperature to 0.");
             setTemperature(0);
         }
@@ -20,7 +20,7 @@ public class Coffee {
 
     public void setTemperature(int temperature) throws TooHotException{
         if (temperature > 120) {
-            throw new TooHotException("The coffee is too hot! Temperature set to 0");
+            throw new TooHotException("The coffee is too hot!");
         }
         this.temperature = temperature;
     }
